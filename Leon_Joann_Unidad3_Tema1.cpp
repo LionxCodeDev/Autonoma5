@@ -6,7 +6,11 @@
 using namespace std;
 
 void limpiarPantalla() {
-    system("clear");
+    #ifdef _WIN32
+        system("cls");  // Windows
+    #else
+        system("clear"); // Linux/macOS
+    #endif
 }
 
 void encabezado(){
